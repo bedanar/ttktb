@@ -38,11 +38,14 @@ export const Block = styled.div`
     margin: 0;
     padding: 0;
 `
-export const Navigation = styled.ul`
-    display: flex;
-    align-items: center;
+export const Navigation = styled.ul.attrs(props => ({
+    type: 'string',
+    align: props.align || '',
+    justify: props.justify || '',
+}))`
+    align-items: ${props => props.align};
     list-style: none;
-    justify-content: space-between
+    justify-content: ${props => props.justify}
 `
 export const ListItem = styled.li.attrs(props => ({
     type: 'text',
@@ -59,7 +62,6 @@ export const Link = styled.a.attrs(props => ({
 }))`
     text-decoration: none;
     cursor: pointer;
-    display: block;
     margin-right: ${props => props.marginR};
     padding-bottom: $(props => props.paddingB)
 `
@@ -75,16 +77,18 @@ export const Div = styled.div.attrs(props => ({
 `
 
 export const Section  = styled.section`
-    height: 75vh;
-    dispplay: flex;
+    display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     margin-top: 100px
 `
 export const SectionTitle = styled.h2`
-    font-size: 36px;
-    font-weight: bold
+    font-size: 24px;
+    font-weight: bold;
+    @media (min-width: 676px){
+        font-size: 36px;
+    }
 `
 export const Button = styled.button.attrs(props =>( {
     type: 'string',

@@ -17,7 +17,7 @@ export const Projects = () => {
     return(
         <Section>
             <SectionTitle>Проектлар</SectionTitle>
-            <ul className='grid grid-cols-4 gap-4 mt-10'>
+            <ul className='grid md:grid-cols-2 grid-cols-1 lg:grid-cols-4 gap-4 mt-10'>
                 {projects.map((project) => {
                     return (
                         <li>

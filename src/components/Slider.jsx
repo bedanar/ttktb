@@ -22,7 +22,7 @@ export default function Slider ({mainSliderBlocks, As}) {
 	}
     return (
         <div className='flex items-center justify-between'>
-            <ArrowButton onClick={prevSlideFunction} className="mr-4"> {"<"} </ArrowButton>
+            <ArrowButton onClick={prevSlideFunction} className="mr-4  hidden md:block"> {"<"} </ArrowButton>
                 {mainSliderBlocks.map((item, index) => {
                     return (
                         <div className={slideIndex === index + 1 ? 'block' : 'hidden'}>
@@ -30,7 +30,7 @@ export default function Slider ({mainSliderBlocks, As}) {
                         </div>
                     )
                 })}
-            <ArrowButton onClick={nextSlideFunction} className='ml-4'> {">"} </ArrowButton>
+            <ArrowButton onClick={nextSlideFunction} className='ml-4  hidden md:block'> {">"} </ArrowButton>
         </div>
     )
 }

@@ -16,7 +16,7 @@ export const Library = () => {
     return(
         <Section>
             <SectionTitle>Китапханә</SectionTitle>
-            <ul className='grid grid-cols-4 gap-4 mt-10'>
+            <ul className='grid md:grid-cols-2 grid-cols-1 lg:grid-cols-4 gap-4 mt-10'>
                 {books.map((book) => {
                     return (
                         <li>
@@ -25,7 +25,7 @@ export const Library = () => {
                     )
                 })}
             </ul>
-            <div className="flex justify-center">
+            <div className="flex items-center justify-center">
                 <Button backgroundColor="var(--yellow-color)" 
                     padding="12px 24px" 
                     textSize="18px" 
